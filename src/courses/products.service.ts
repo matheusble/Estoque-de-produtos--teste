@@ -69,11 +69,9 @@ export class ProductsService {
 
         if(category){
             return category;
+        }else{
+            throw new NotFoundException(`Category does not exist`)
         }
-
-        return this.categoryRepository.create({ name });
-        
-        
     }
 }
 
